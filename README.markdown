@@ -27,6 +27,7 @@ to all sessions.
     -m, --machines a,b,c             Comma-separated list of hosts
     -s, --sleep SLEEP                Number of seconds to sleep between creating SSH sessions
     -X, --extra EXTRA_PARAM          Additional ssh parameters (e.g. -Xi=myidentity.pem)
+    -z, --pre-command CMD            Command to run in terminal before ssh sessions are created
 
 i2cssh will assume you want to connect to a cluster when only one host is given.
 
@@ -148,6 +149,10 @@ Connect to the machines a, b and c
 ### -s, --sleep SLEEP
 
 Wait SLEEP seconds between starting each ssh session. This will take decimals as well (0.5 for half a second)
+
+### -z, --pre-command CMD
+
+Execute CMD prior to creating ssh sessions.
 
 ### -X, --extra EXTRA
 
