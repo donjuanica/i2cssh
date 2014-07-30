@@ -127,6 +127,9 @@ class I2Cssh
                 if @i2_options[:sleep] then
                     sleep @i2_options[:sleep] * i
                 end
+                if @i2_options[:precommand] then
+                    @term.sessions[i].write :text => "#{@i2_options[:precommand]}"
+                end
                 @term.sessions[i].write :text => "unset HISTFILE && echo -e \"\\033]50;SetProfile=#{@profile}\\a\" && #{@ssh_prefix} #{send_env} #{server}"
             else
                 
