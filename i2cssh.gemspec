@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "i2cssh"
-  s.version = "1.12.0"
+  s.name = "i2cssh-adobe"
+  s.version = "1.12.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Wouter de Bie"]
-  s.date = "2014-02-23"
-  s.description = "csshX like cluster ssh using iTerm2 panes"
-  s.email = "wouter@evenflow.se"
+  s.authors = ["Wouter de Bie","Jon Gale"]
+  s.date = "2014-07-29"
+  s.description = "csshX like cluster ssh using iTerm2 panes - enhanced for use @ Adobe"
+  s.email = "jogale@adobe.com"
   s.executables = ["i2cssh"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_i2cssh.rb"
   ]
-  s.homepage = "http://github.com/wouterdebie/i2cssh"
+  s.homepage = "https://github.com/donjuanica/i2cssh"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.3"

@@ -36,7 +36,7 @@ def set_options(config_hash, login_override=nil)
         exit 1
     end
 
-    [:broadcast, :profile, :rank, :iterm2, :login, :columns, :rows, :sleep, :direction, :itermname].each do |p|
+    [:broadcast, :profile, :rank, :iterm2, :login, :columns, :rows, :sleep, :direction, :itermname, :precommand].each do |p|
         @i2_options[p] = config_hash[p.to_s].nil? ? @i2_options[p] : config_hash[p.to_s]
     end
 
@@ -165,6 +165,10 @@ optparse = OptionParser.new do |opts|
         'Additional ssh parameters (e.g. -Xi=myidentity.pem)' do |x|
 
          ssh_options << "-" + x.split("=").join(" ")
+    end
+    opts.on '-z', '--pre-command CMD', String,
+        'Command to run in terminal before ssh sessions are created' do |z|
+        opts_from_cmdline[:precommand] = z
     end
 
 end
