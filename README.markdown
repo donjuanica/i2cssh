@@ -62,6 +62,7 @@ Optional parameters can be used globablly or per cluster and include:
 
     broadcast: (true/false)     # Enable/disable broadcast on start
     login: <username>           # Use this username for login
+    precommand: <cmd>           # Run <cmd> before starting ssh sessions
     profile: <iTerm2 profile>   # Use this iTerm profile
     rank: (true/false)          # Enable sending LC_RANK as an environment variable
     columns: <cols>             # Amount of columns
