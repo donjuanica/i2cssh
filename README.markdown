@@ -6,7 +6,10 @@ to all sessions.
 
 ## Installing 
 
-    $ gem install i2cssh
+Clone repo then run:
+
+    $ gem build i2cssh.gemspec
+    $ sudo gem install ./i2cssh-adobe-1.12.1.gem
 
 ## Usage
     Usage: i2cssh [options]  [(username@host [username@host] | username@cluster)]
